@@ -22,7 +22,7 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         //validar datos
-        $datos = $request->validate({
+                $datos=$request->validate({
             'nombre' =>['required','string','max:100'],
             'descripcion' =>['nullable','string','max:255'],
             'precio' => ['required','integer','min:100'],
